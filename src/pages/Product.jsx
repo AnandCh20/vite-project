@@ -73,7 +73,7 @@ function Product() {
                     <img 
                         src={images[source]} 
                         alt={`Slide ${source + 1}`} 
-                        style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
+                        style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius:'0.4rem' }} 
                     />
                 </div>
 

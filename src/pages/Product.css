@@ -1,99 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-*{
+* {
     margin: 0.1rem;
     font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+    background-color: bisque;
 }
 
 #centerMenu {
     display: flex;
     justify-content: center;
-    border: 2px solid black;
-    /* padding: 10px; */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visual separation */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #center {
     display: flex;
     flex-direction: column;
-    width: 40vw; /* Adjust based on design needs */
-    max-width: 600px; /* Max width for larger screens */
+    width: 40vw;
+    /* Adjust based on design needs */
+    max-width: 600px;
+    /* Max width for larger screens */
     /* border: 2px solid rgb(235, 26, 26); */
     position: relative;
     overflow: hidden;
-    background-color: #f9f9f9; /* Optional: Add a background color */
 }
 
 .lisitems {
-    border: 2px solid rgb(82, 26, 235);
     display: flex;
     flex-direction: row;
     list-style-type: none;
-   
+
 }
 
 
-.rightli{
+.rightli {
     list-style-type: none;
-    background-color: rgb(255, 35, 90);
+    background-color: #f2003c;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     padding: 0.5rem;
     color: #f9f9f9;
 }
 
-.leftli{
+.leftli {
     list-style-type: none;
-    background-color: rgb(255, 35, 90);
+    background-color: #f2003c;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     padding: 0.5rem;
     color: #f9f9f9;
 }
 
-div#rMenu{
+div#rMenu {
     margin: 0px;
     padding: 0px;
 }
 
-div#lMenu{
+div#lMenu {
     margin: 0px;
     padding: 0px;
 }
 
-.leftMenu{
+.leftMenu {
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
     width: 15vw;
 }
 
-.rightMenu{
+.rightMenu {
     margin: 0px;
     padding: 0px;
-    width: 15vw; 
+    width: 15vw;
 }
 
-ul.lisitems{
+ul.lisitems {
     margin: 0px;
     padding: 0px;
     /* font-size: em; */
 }
 
-li#l1{
-    background-color: rgb(124, 0, 37);;
+li#l1 {
+    background-color: rgb(124, 0, 37);
     color: #f9f9f9;
     padding: 0.2rem 0.2rem 0.2rem 0.4rem;
     width: 100%;
+    border-radius: 0.2rem;
 }
 
-li#l2,#l3,#l4{
-    background-color: #606470;
+li#l2,
+#l3,
+#l4 {
+    background-color: #5d5f5a;
     color: #f9f9f9;
     padding: 0.2rem 0.2rem 0.2rem 0.4rem;
     width: 100%;
+    border-radius: 0.2rem;
 }
 
-#l4 input{
+#l4 input {
     border-radius: 1rem;
+}
+
+#center {
+    background-color: rgb(124, 0, 37);
+}
+
+@media screen and (max-width: 750px) {
+    #center {
+        width: 60vw;
+    }
+
+    .leftMenu,
+    .rightMenu {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #center {
+        width: 80vw;
+    }
+
+    .leftMenu,
+    .rightMenu {
+        width: 25vw;
+        font-size: small;
+    }
+
+    .lisitems {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li#l1,
+    li#l2,
+    li#l3,
+    li#l4 {
+        width: auto;
+        margin: 0.2rem 0;
+        font-size: small;
+    }
 }
