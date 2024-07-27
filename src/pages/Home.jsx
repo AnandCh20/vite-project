@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { json } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     name: '',
     username: '',
@@ -61,6 +62,7 @@ function Home() {
         phone: '',
         checkbox:false
       })
+      navigate('/Product');
     }
   }
 
